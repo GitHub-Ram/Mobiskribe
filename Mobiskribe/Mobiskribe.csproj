@@ -23,7 +23,7 @@
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
     <IOSDebuggerPort>24093</IOSDebuggerPort>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
@@ -125,7 +125,6 @@
     <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Views\Main.storyboard" />
     <InterfaceDefinition Include="Views\SplashScreen.storyboard" />
     <InterfaceDefinition Include="Views\LoginView.storyboard" />
   </ItemGroup>
@@ -136,18 +135,18 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewControllers\ViewController.cs" />
-    <Compile Include="ViewControllers\ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\SplashScreen.cs" />
-    <Compile Include="ViewControllers\SplashScreen.designer.cs">
-      <DependentUpon>SplashScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="ViewControllers\LoginViewController.cs" />
     <Compile Include="ViewControllers\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\LoginViewNavigator.cs" />
+    <Compile Include="ViewControllers\LoginViewNavigator.designer.cs">
+      <DependentUpon>LoginViewNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IntroductionViewController.cs" />
+    <Compile Include="Views\IntroductionViewController.designer.cs">
+      <DependentUpon>IntroductionViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +160,33 @@
     <BundleResource Include="Resources\Fonts\raleway_regular.ttf" />
     <BundleResource Include="Resources\Fonts\roboto_bold.ttf" />
     <BundleResource Include="Resources\Fonts\roboto_regular.ttf" />
+    <BundleResource Include="Resources\ss1.png" />
+    <BundleResource Include="Resources\ss1%402x.png" />
+    <BundleResource Include="Resources\ss1%403x.png" />
+    <BundleResource Include="Resources\ss2.png" />
+    <BundleResource Include="Resources\ss2%402x.png" />
+    <BundleResource Include="Resources\ss2%403x.png" />
+    <BundleResource Include="Resources\ss3.png" />
+    <BundleResource Include="Resources\ss3%402x.png" />
+    <BundleResource Include="Resources\ss3%403x.png" />
+    <BundleResource Include="Resources\ss4.png" />
+    <BundleResource Include="Resources\ss4%402x.png" />
+    <BundleResource Include="Resources\ss4%403x.png" />
+    <BundleResource Include="Resources\ss5.png" />
+    <BundleResource Include="Resources\ss5%402x.png" />
+    <BundleResource Include="Resources\ss5%403x.png" />
+    <BundleResource Include="Resources\ss6.png" />
+    <BundleResource Include="Resources\ss6%402x.png" />
+    <BundleResource Include="Resources\ss6%403x.png" />
+    <BundleResource Include="Resources\ss7.png" />
+    <BundleResource Include="Resources\ss7%402x.png" />
+    <BundleResource Include="Resources\ss7%403x.png" />
+    <BundleResource Include="Resources\banner1.png" />
+    <BundleResource Include="Resources\banner1%402x.png" />
+    <BundleResource Include="Resources\banner1%403x.png" />
+    <BundleResource Include="Resources\banner2.png" />
+    <BundleResource Include="Resources\banner2%402x.png" />
+    <BundleResource Include="Resources\banner2%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

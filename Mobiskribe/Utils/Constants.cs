@@ -15,6 +15,8 @@ namespace Mobiskribe.Utils
         public class StoryBoardID
         {
             public const string LOGINVIEWCONTROLLER = "LoginViewController";
+            public const string LOGINVIEWNAVIGATOR = "LoginViewNavigator";
+            public const string INTRODUCTIONVIEWCONTROLLER = "IntroductionViewController";
         }
     }
 }

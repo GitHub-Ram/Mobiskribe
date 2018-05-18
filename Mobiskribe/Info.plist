@@ -31,8 +31,6 @@
 	<string>Resources/Assets.xcassets/AppIcon.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Assets.xcassets/LaunchImage.launchimage</string>
-	<key>UIMainStoryboardFile</key>
-	<string>LoginView</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Views/SplashScreen</string>
 </dict>

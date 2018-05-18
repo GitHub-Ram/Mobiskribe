@@ -1,4 +1,7 @@
-﻿using Foundation;
+﻿using System.Threading.Tasks;
+using Foundation;
+using Mobiskribe.Utils;
+using Mobiskribe.Views;
 using UIKit;
 
 namespace Mobiskribe
@@ -9,7 +12,7 @@ namespace Mobiskribe
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
-
+        public UIWindow window;
         public override UIWindow Window
         {
             get;
@@ -20,8 +23,25 @@ namespace Mobiskribe
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
-
+            StartTimer();
             return true;
+        }
+
+        public async void StartTimer()
+        {
+            await Task.Delay(3000);
+            window = new UIWindow(UIScreen.MainScreen.Bounds);
+            UIStoryboard board = UIStoryboard.FromName(Constants.StoryBoardFile.LOGIN_VIEW, NSBundle.MainBundle);
+            bool logined = NSUserDefaults.StandardUserDefaults.BoolForKey("login_status");
+            if(logined){
+                LoginViewNavigator loginView = board.InstantiateViewController(Constants.StoryBoardID.LOGINVIEWNAVIGATOR) as LoginViewNavigator;
+                window.RootViewController = loginView;
+            }else{
+                IntroductionViewController introduction = board.InstantiateViewController(Constants.StoryBoardID.INTRODUCTIONVIEWCONTROLLER) as IntroductionViewController;
+                window.RootViewController = introduction;
+            }
+
+            window.MakeKeyAndVisible();
         }
 
         public override void OnResignActivation(UIApplication application)
